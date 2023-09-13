@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use app\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,8 @@ Route::post('login', 'AuthController@login');
 Route::get('register', 'AuthController@showRegistrationForm')->name('register');
 Route::post('register', 'AuthController@register');
 Route::post('logout', 'AuthController@logout')->name('logout');
+
+
+Route::middleware(['auth'])->group(function () {
+    // Routes protégées par l'authentification
+});
