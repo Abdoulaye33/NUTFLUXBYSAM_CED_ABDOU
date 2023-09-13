@@ -23,7 +23,7 @@ Route::get('/welcome', function () {
 });
 
 // Itinéraires pour l'authentification
-Route::get('login', 'AuthController@showLoginForm')->name('login');
+Route::get('login', [App\Http\Controllers\AuthController::class, 'login'])->name('login');
 Route::post('login', 'AuthController@login');
 Route::get('register', 'AuthController@showRegistrationForm')->name('register');
 Route::post('register', 'AuthController@register');
