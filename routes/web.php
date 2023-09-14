@@ -23,11 +23,12 @@ Route::get('/welcome', function () {
 });
 
 // Itinéraires pour l'authentification
-Route::get('login', [App\Http\Controllers\AuthController::class, 'login'])->name('login');
-Route::post('login', 'AuthController@login');
-Route::get('register', 'AuthController@showRegistrationForm')->name('register');
-Route::post('register', 'AuthController@register');
-Route::post('logout', 'AuthController@logout')->name('logout');
+Route::get('login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('login', [AuthController::class, 'login']);
+Route::get('register', [AuthController::class, 'showRegistrationForm'])->name('register');
+Route::post('register', [AuthController::class, 'register']);
+Route::post('logout', [AuthController::class, 'logout'])->name('logout');
+
 
 
 Route::middleware(['auth'])->group(function () {
