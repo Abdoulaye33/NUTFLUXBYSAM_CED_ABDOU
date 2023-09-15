@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use app\Http\Controllers\AuthController;
+use App\Http\Controllers\AuthController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,11 +15,11 @@ use app\Http\Controllers\AuthController;
 |
 */
 
-Route::get('/', function () {
+Route::get('/hello', function () {
     return view('test');
 });
 
-Route::get('/welcome', function () {
+Route::get('/', function () {
     return view('welcome');
 });
 

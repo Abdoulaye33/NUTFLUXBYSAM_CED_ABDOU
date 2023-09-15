@@ -9,7 +9,7 @@
 
     <h1>HELLO WORLD</h1>
 
-    <a href="/welcome">welcome artisan</a>
+    <a href="/">welcome artisan</a>
 
 </body>
 </html>
