@@ -10,6 +10,6 @@
     <h1>HELLO WORLD</h1>
 
     <a href="/welcome">welcome artisan</a>
-
+    
 </body>
 </html>
