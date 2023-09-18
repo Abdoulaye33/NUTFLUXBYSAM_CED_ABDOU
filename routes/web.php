@@ -15,9 +15,6 @@ use App\Http\Controllers\AuthController;
 |
 */
 
-Route::get('/hello', function () {
-    return view('test');
-});
 
 Route::get('/', function () {
     return view('layouts.index');
