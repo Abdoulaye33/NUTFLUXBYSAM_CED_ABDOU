@@ -20,7 +20,7 @@ Route::get('/hello', function () {
 });
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.index');
 });
 
 // Itinéraires pour l'authentification
