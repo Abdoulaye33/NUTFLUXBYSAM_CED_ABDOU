@@ -22,7 +22,7 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-// Itinéraires pour l'authentification
+
 Route::get('login', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('login', [AuthController::class, 'login']);
 Route::get('register', [AuthController::class, 'showRegistrationForm'])->name('register');
@@ -33,4 +33,13 @@ Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::middleware(['auth'])->group(function () {
     // Routes protégées par l'authentification
+});
+
+
+Route::get('/get-popular-movies', function () {
+    $apiKey = config('services.tmdb.api_key');
+    $response = Http::get("https://api.themoviedb.org/3/movie/popular", [
+        'api_key' => $apiKey,
+    ]);
+    return $response->json();
 });
