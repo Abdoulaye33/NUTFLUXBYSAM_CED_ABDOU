@@ -7,7 +7,8 @@ import TextInput from '@/Components/TextInput.vue';
 import { Head, Link, useForm } from '@inertiajs/vue3';
 
 const form = useForm({
-    name: '',
+    firstname: '',
+    lastname: '', // Assurez-vous que les noms des champs correspondent aux noms dans le formulaire
     email: '',
     password: '',
     password_confirmation: '',
@@ -15,7 +16,15 @@ const form = useForm({
 
 const submit = () => {
     form.post(route('register'), {
-        onFinish: () => form.reset('password', 'password_confirmation'),
+        onFinish: () => {
+            // Récupérez le prénom de l'utilisateur
+            const firstName = form.firstname.split(' ')[0]; // Suppose que le nom complet est fourni sous forme de prénom + nom
+
+            // Redirigez l'utilisateur vers la page "welcome.vue" avec le prénom
+            // en tant que paramètre dans l'URL
+            const welcomeRoute = route('welcome', { firstName });
+            Inertia.visit(welcomeRoute);
+        },
     });
 };
 </script>
@@ -26,19 +35,34 @@ const submit = () => {
 
         <form @submit.prevent="submit">
             <div>
-                <InputLabel for="name" value="Name" />
+                <InputLabel for="firstname" value="Firstname" /> <!-- Utilisez "firstname" pour l'attribut "for" -->
 
                 <TextInput
-                    id="name"
+                    id="firstname"
                     type="text"
                     class="mt-1 block w-full"
-                    v-model="form.name"
+                    v-model="form.firstname"
                     required
                     autofocus
                     autocomplete="name"
                 />
 
-                <InputError class="mt-2" :message="form.errors.name" />
+                <InputError class="mt-2" :message="form.errors.firstname" /> <!-- Utilisez "firstname" pour les erreurs -->
+            </div>
+            <div>
+                <InputLabel for="lastname" value="Lastname" /> <!-- Utilisez "lastname" pour l'attribut "for" -->
+
+                <TextInput
+                    id="lastname"
+                    type="text"
+                    class="mt-1 block w-full"
+                    v-model="form.lastname"
+                    required
+                    autofocus
+                    autocomplete="name"
+                />
+
+                <InputError class="mt-2" :message="form.errors.lastname" /> <!-- Utilisez "lastname" pour les erreurs -->
             </div>
 
             <div class="mt-4">
