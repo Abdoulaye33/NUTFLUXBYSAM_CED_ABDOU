@@ -8,13 +8,17 @@ export default defineConfig({
             input: 'resources/js/app.js',
             refresh: true,
         }),
-        vue({
-            template: {
-                transformAssetUrls: {
-                    base: null,
-                    includeAbsolute: false,
+        vue(),
+        styleImport({
+            // Importez le fichier SCSS principal ici
+            libs: [
+                {
+                    libraryName: 'style.css',
+                    esModule: true,
+                    ensureStyleFile: true,
+                    preprocess: false,
                 },
-            },
+            ],
         }),
     ],
 });
