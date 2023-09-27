@@ -9,7 +9,7 @@
 
 
 <script setup>
-import navbar from '../components/navbar.vue'
+import navbar from '../layout/navbar.vue'
 
-import pied from "../components/pied.vue";
+import pied from "../layout/pied.vue";
 </script>

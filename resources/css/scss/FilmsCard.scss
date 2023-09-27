@@ -1,0 +1,20 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap');
+
+
+.FilmsCard{
+    h1{
+        font-size: 1.8rem;
+        color: #1a202c;
+        font-family: Roboto;
+    }
+    .description{
+        color: red;
+        font-family: Roboto;
+        font-size: 0.8rem;
+    }
+    .casting{
+        font-size: 1rem;
+        color: blue;
+    }
+}
