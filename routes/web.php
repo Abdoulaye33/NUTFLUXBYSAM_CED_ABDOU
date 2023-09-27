@@ -1,7 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+<<<<<<< HEAD
 use App\Http\Controllers\AuthController;
+=======
+use App\Http\Controllers\UsersController;
+use App\Http\Controllers\Auth\RegisterController;
+>>>>>>> ced
 
 
 /*
@@ -15,6 +20,7 @@ use App\Http\Controllers\AuthController;
 |
 */
 
+<<<<<<< HEAD
 
 Route::get('/', function () {
     return view('layouts.index');
@@ -26,9 +32,14 @@ Route::post('login', [AuthController::class, 'login']);
 Route::get('register', [AuthController::class, 'showRegistrationForm'])->name('register');
 Route::post('register', [AuthController::class, 'register']);
 Route::post('logout', [AuthController::class, 'logout'])->name('logout');
+=======
+Route::view('/', 'home');
+Route::view('/films', 'films');
+Route::view ('/users', 'users');
+Route::view('/login', 'auth.login')->name('login');
+Route::view('/register', 'register')->name('register'); // Cette route affiche le formulaire d'inscription
+
+Route::post('/register', [RegisterController::class, 'register']);
+>>>>>>> ced
 
 
-
-Route::middleware(['auth'])->group(function () {
-    // Routes protégées par l'authentification
-});
