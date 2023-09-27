@@ -1,0 +1,19 @@
+footer{
+    display: flex;
+    justify-content: space-between;
+
+    background-color: black;
+    width: 100%;
+    height: 30%;
+    h2{
+        color: #AEC3B0;
+    }
+    ul{
+        list-style: none;
+        padding: 0;
+        li{
+            margin: 0.5rem;
+            color: #AEC3B0;
+        }
+    }
+}
