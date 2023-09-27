@@ -2,7 +2,7 @@
     <navbar />
 
 <h1>Films</h1>
-    <FilmsCard v-for="(card, index) in 3" :key="index"/>
+    <FilmsCard v-for="(card, index) in 5" :key="index"/>
 
     <pied />
 </template>
