@@ -1,18 +1,19 @@
 import './bootstrap';
+
 import {createApp} from "vue";
 
-import home from '../js/pages/home.vue';
-import films from '../js/pages/films.vue';
-import users from '../js/pages/users.vue';
-import register from '../js/pages/register.vue'
+import Home from './Pages/home.vue';
+import Films from './Pages/films.vue';
+import Users from './Pages/users.vue';
+import Register from './Pages/register.vue'
 
 
 
-createApp(home)
+createApp(Home)
     .mount('#home')
-createApp(films)
+createApp(Films)
     .mount('#films')
-createApp(users)
+createApp(Users)
     .mount('#users')
-createApp(register)
+createApp(Register)
     .mount('#register')
