@@ -2,10 +2,11 @@
 
 
 <h1 class="title">Films</h1>
-    <FilmsCard v-for="(card, index) in 5" :key="index"/>
+    <FilmsCard v-for="(card, index) in 1" :key="index"/>
 
 
 </template>
+
 <script setup>
 
 
@@ -14,11 +15,11 @@ import FilmsCard from "../components/FilmsCard.vue";
 <style lang="scss">
 .title{
 
-
+    margin: 1rem;
     font-size: 4rem;
     color: #2d3748;
     font-family: Roboto;
-   position: relative;
+    position: relative;
     &:after {
         content: ''; /* Contenu vide pour le pseudo-élément */
         display: block; /* Affiche le pseudo-élément en tant que bloc */

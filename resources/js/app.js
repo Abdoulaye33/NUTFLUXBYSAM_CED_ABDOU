@@ -10,6 +10,7 @@ import home from '../js/Pages/home.vue';
 import Dashboard from "@/Pages/Dashboard.vue";
 import Login from "@/Pages/Auth/Login.vue";
 import Series from "@/Pages/series.vue";
+import film from "@/Pages/film.vue";
 
 const router = createRouter({
     history: createWebHistory(), // Spécifiez ici la base URL de votre Laravel
@@ -17,6 +18,7 @@ const router = createRouter({
         { path: '/', component: home },
         { path: '/films', component: Films },
         {path: '/series', component: Series},
+        {path: '/film/:id' , component: film},
         { path: '/users', component: Users },
         { path: '/register', component: Register },
         {path: '/login', component: Login},
