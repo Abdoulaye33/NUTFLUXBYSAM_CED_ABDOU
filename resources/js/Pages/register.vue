@@ -1,5 +1,5 @@
 <template>
-    <navbar />
+
     <form action="{{ route('register') }}" method="POST">
 
         <label for="firstname">Firstname</label>
@@ -15,14 +15,14 @@
 
 
 
-    <pied />
+
 </template>
 
 
 
 
 <script setup>
-import navbar from '../layout/navbar.vue'
 
-import pied from "../layout/pied.vue";
+
+
 </script>

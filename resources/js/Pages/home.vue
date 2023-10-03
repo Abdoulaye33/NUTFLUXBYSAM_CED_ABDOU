@@ -1,22 +1,17 @@
+<script setup>
+import presentation_nutflux from "../components/presentation_nutflux.vue";
+
+import searchbar from "../components/searchbar.vue";
+
+</script>
+
 <template>
-    <navbar />
+
     <searchbar/>
     <presentation_nutflux/>
 
-
-    <pied />
 </template>
 
+<style scoped lang="scss">
 
-
-
-<script setup>
-import navbar from '../layout/navbar.vue'
-import pied from "../layout/pied.vue";
-import Searchbar from "@/components/searchbar.vue";
-import Presentation_nutflux from "@/components/presentation_nutflux.vue";
-</script>
-
-<style>
-@import url("../../css/scss/home.scss");
 </style>

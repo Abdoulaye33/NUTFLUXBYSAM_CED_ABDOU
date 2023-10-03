@@ -9,7 +9,7 @@
     @vite('resources/css/app.css')
 </head>
 <body>
-<main id="users"></main>
+<main id="app"></main>
 @vite('resources/js/app.js')
 </body>
 </html>

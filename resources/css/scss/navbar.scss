@@ -27,13 +27,19 @@ body{
             border-radius: 2rem;
             background-color: #AEC3B0;
             padding: 1rem 1rem;
-
-           margin: 1rem;
+            margin: 1rem;
             a{
                 text-decoration: none;
                 color: #4a5568;
             }
         }
+        /* Dans votre fichier SCSS */
+        .button-click-animation {
+            /* Définissez ici vos propriétés d'animation, par exemple une échelle */
+            transform: scale(1.2);
+            transition: transform 0.3s ease; /* Animation de l'échelle pendant 0.3 seconde avec une accélération */
+        }
+
     }
     .inscription{
         button{
