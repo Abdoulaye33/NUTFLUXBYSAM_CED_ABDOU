@@ -1,6 +1,5 @@
 <script setup>
 import presentation_nutflux from "../components/presentation_nutflux.vue";
-
 import searchbar from "../components/searchbar.vue";
 
 </script>

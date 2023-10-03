@@ -8,7 +8,6 @@
         <input type="email">
         <label for="text">Password</label>
         <input type="password">
-       <button>Log In</button>
     </form>
 </template>
 
