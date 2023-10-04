@@ -3,10 +3,10 @@ import { createApp } from 'vue';
 import { createRouter, createWebHistory } from 'vue-router';
 
 import App from './app.vue';
-import Films from '../js/pages/films.vue';
-import Users from '../js/pages/users.vue';
-import Register from '../js/pages/register.vue';
-import home from '../js/Pages/home.vue';
+import Films from './Pages/films.vue';
+import Users from './Pages/users.vue';
+import Register from './Pages/register.vue';
+import home from './Pages/home.vue';
 import Dashboard from "@/Pages/Dashboard.vue";
 import Login from "@/Pages/Auth/Login.vue";
 import Series from "@/Pages/series.vue";
